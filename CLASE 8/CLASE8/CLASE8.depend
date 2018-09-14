@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1536879437 source:/home/alumno/Escritorio/MGCALVETTE/CLASE 8/CLASE8/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1536878590 source:/home/alumno/Escritorio/MGCALVETTE/CLASE 8/CLASE8/utn.c
+	<stdio_ext.h>
+	<string.h>
+	<stdlib.h>
+	"utn.h"
+
+1536879680 /home/alumno/Escritorio/MGCALVETTE/CLASE 8/CLASE8/utn.h
+
