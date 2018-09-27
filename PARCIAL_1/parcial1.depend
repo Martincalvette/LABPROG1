@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1537491303 source:/home/alumno/Escritorio/Producto/parcial1/main.c
+	<stdio.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+
+1537491563 /home/alumno/Escritorio/Producto/parcial1/parcial.h
+
+1537484728 /home/alumno/Escritorio/Producto/parcial1/utn.h
+
+1537483923 source:/home/alumno/Escritorio/Producto/parcial1/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1537491439 source:/home/alumno/Escritorio/Producto/parcial1/parcial.c
+	<stdio.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+
+1538009249 source:/home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+	"contrataciones.h"
+
+1538008178 /home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/parcial.h
+
+1538000345 /home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/utn.h
+
+1538008760 source:/home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/parcial.c
+	<stdio_ext.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+	<string.h>
+
+1538007448 source:/home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1538009249 source:/home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/contrataciones.c
+	<stdio_ext.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+	<string.h>
+	"contrataciones.h"
+
+1538009021 /home/alumno/Escritorio/MGCALVETTE/PARCIAL_1/contrataciones.h
+
