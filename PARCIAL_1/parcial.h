@@ -1,6 +1,7 @@
 #ifndef PARCIAL_H_INCLUDED
 #define PARCIAL_H_INCLUDED
-
+#define LIMITEP 1
+#include <string.h>
 
 typedef struct
 {
@@ -12,13 +13,14 @@ typedef struct
     int isEmpty;
 
 }Pantalla;
-
-
+void bajaDePantalla(Pantalla* pPantalla, int id);
+void modificarPantalla(Pantalla* pPantalla, int id);
 void init_isEmpty(Pantalla* pPantalla, int limite);
 void altaPantalla(Pantalla* pPantalla);
 int getEspacioVacio(Pantalla* pPantalla , int limite);
-void get_tipo(Pantalla* pPantalla);
-void listarPantallas(Pantalla* pPantalla, int limite);
+void get_tipo(int* tipo);
+void listarPantalla(Pantalla* pPantalla, int limite);
+
 int buscarPantallaPorID(Pantalla* pPantalla, int limite, int id);
 
 #endif // PARCIAL_H_INCLUDED

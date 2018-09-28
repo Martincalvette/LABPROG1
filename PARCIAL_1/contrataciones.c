@@ -1,58 +1,56 @@
-#include <stdio_ext.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "parcial.h"
 #include "utn.h"
 #include <string.h>
 #include "contrataciones.h"
-#define LIMITEP 100
-#define LIMITEC 1000
 
 
+static int generarId(void)
+{
+    static int id = 0;
+    id++;
+    return id;
+}
 
-static int generarId(void);
-
-
-void con_init_isEmpty(Contrataciones* pContrataciones, int limite)
+void con_init_isEmpty(Contrataciones* pContratacion, int limite)
 {
     int i=0;
 
-    if(pContrataciones!= NULL && i<limite)
+    if(pContratacion!= NULL && i<limite)
     {
         for(i=0; i<limite; i++)
         {
-            pContrataciones[i].isEmpty = 1;
+            pContratacion[i].isEmpty = 1;
         }
     }
 }
 
 
-void altaContrataciones (Contrataciones* pContrataciones,  Pantalla* pPantalla, int limitePant, int limiteCont)
+void alta_contrataciones(Contrataciones* pContratacion,Pantalla* pPantalla, int limiteP,int limiteC)
 {
     int id;
     int index;
 
-    listarPantallas(pPantalla,LIMITEP);
-    {
-        utn_getEntero(&id,3,"ID cargado","Id mal ingresado",0,101);
-    }
+    index = con_getEspacioVacio(pContratacion,limiteC);
 
-    index=con_getEspacioVacio(pContrataciones,LIMITEC);
+    utn_getEntero(&id,1,"\nIngrese el ID de la pantalla donde se quiera publicar: ","Mal ingresado",0,100);
 
-    pContrataciones[index].id = generarId();
-    getString("\nIngrese el nombre del video de la pantalla: ",pContrataciones[index].video);
-    getString("\nIngrese el cuit del cliente: ", pContrataciones[index].cuit);
-    getString("\nIngrese el la cantidad de dias de la contratacion: ", pContrataciones[index].dias);
-
+    pContratacion[index].id = generarId();
+    pContratacion[index].idPantalla = id;
+    utn_getEntero(&pContratacion[index].dias,1,"Ingrese la cantidad de dias:","Mal ingresado",0,1000);
+    utn_getLetrasYNumeros(pContratacion[index].video,50,"Ingrese el nombre del video:");
+    utn_getLetrasYNumeros(pContratacion[index].cuit,50,"Ingrese el numero cuit:");
 }
 
-int con_getEspacioVacio(Contrataciones* pContrataciones , int limite)
+int con_getEspacioVacio(Contrataciones* pContratacion , int limite)
 {
     int i;
     int index;
 
     for(i=0;i<limite;i++)
     {
-        if(pContrataciones[i].isEmpty==1)
+        if(pContratacion[i].isEmpty==1)
         {
             index = i;
         }
@@ -61,10 +59,20 @@ int con_getEspacioVacio(Contrataciones* pContrataciones , int limite)
     return index;
 }
 
-static int generarId(void)
+void listarContratacion(Contrataciones* pContrataciones, int limite)
 {
-    static int id = 0;
-    id++;
-    return id;
+    int i;
+
+    for(i=0;i<limite;i++)
+    {
+        if(pContrataciones[i].isEmpty==1)
+        {
+            printf("ID: %d\n",pContrataciones[i].id);
+            printf("Cuit: %s\n",pContrataciones[i].cuit);
+            printf("Dias: %d\n",pContrataciones[i].dias);
+        }
+    }
 }
+
+
 

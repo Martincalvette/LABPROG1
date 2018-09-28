@@ -3,9 +3,6 @@
 #include "parcial.h"
 #include "utn.h"
 #include <string.h>
-#define LIMITEP 100
-#define LIMITEC 1000
-
 
 static int generarId(void);
 
@@ -16,10 +13,10 @@ void modificarPantalla(Pantalla* pPantalla, int id)
 
     index = buscarPantallaPorID(pPantalla, LIMITEP, id);
 
-    getString("Ingrese la direccion de la pantalla: ",pPantalla[index].direccion);
-    get_tipo(&pPantalla[index]);
-    utn_getFloat(&pPantalla[index].precio,3,"bien hecho","no",0,99);
-    getString("Ingrese el nombre de la pantalla: ", pPantalla[index].nombre);
+    utn_getLetrasYNumeros(pPantalla[index].direccion,LIMITEP,"Ingrese la direccion:");
+    get_tipo(&pPantalla[index].tipo);
+    utn_getFloat(&pPantalla[index].precio,0,"Ingrese el precio:","Mal ingresado",0.0,100000.0);
+    utn_getLetrasYNumeros(pPantalla[index].nombre,50,"Ingrese el nombre de la pantalla: ");
 
 }
 
@@ -27,13 +24,17 @@ void altaPantalla(Pantalla* pPantalla)
 {
     int index;
 
+
+
     index=getEspacioVacio(pPantalla,LIMITEP);
 
+
+    get_tipo(&pPantalla[index].tipo);
     pPantalla[index].id = generarId();
-    getString("Ingrese la direccion de la pantalla: ",pPantalla[index].direccion);
-    get_tipo(&pPantalla[index]);
-    utn_getFloat(&pPantalla[index].precio,3,"bien hecho","no",0,99);
-    getString("Ingrese el nombre de la pantalla: ", pPantalla[index].nombre);
+    utn_getLetrasYNumeros(pPantalla[index].direccion,LIMITEP,"Ingrese la direccion:");
+    utn_getFloat(&pPantalla[index].precio,0,"Ingrese el precio","Mal ingresado",0.0,100000.0);
+    utn_getLetrasYNumeros(pPantalla[index].nombre,50,"Ingrese el nombre de la pantalla: ");
+    listarPantalla(pPantalla,LIMITEP);
 
 }
 
@@ -67,31 +68,33 @@ int getEspacioVacio(Pantalla* pPantalla , int limite)
         if(pPantalla[i].isEmpty==1)
         {
             index = i;
+            break;
         }
     }
 
     return index;
 }
 
-void get_tipo(Pantalla* pPantalla)
+void get_tipo(int* tipo)
 {
     int opcion;
 
     __fpurge(stdin);
-    printf("Ingrese una opcion: ");
+    printf("Ingrese una opcion:");
     printf("\n1) LED");
-    printf("\n2) LCD");
+    printf("\n2) LCD\n");
     scanf("%d",&opcion);
 
-    switch(opcion)
-    {
-        case 1:
-            pPantalla->tipo = 1;
-            break;
-        case 2:
-            pPantalla->tipo = 2;
-            break;
-    }
+        switch(opcion)
+        {
+            case 1:
+                *tipo = 1;
+                break;
+
+            case 2:
+                *tipo = 2;
+                break;
+        }
 }
 int buscarPantallaPorID(Pantalla* pPantalla, int limite, int id)
 {
@@ -115,42 +118,23 @@ void bajaDePantalla(Pantalla* pPantalla, int id)
 
     index = buscarPantallaPorID(pPantalla,LIMITEP,id);
 
-    pPantalla[index].isEmpty=1;
+    pPantalla[index].isEmpty = 1;
 
 }
 
-void listarPantallas(Pantalla* pPantalla, int limite)
+void listarPantalla(Pantalla* pPantalla, int limite)
 {
-
     int i;
-    for (i=0;i<limite;i++)
+
+    for(i=0;i<limite;i++)
     {
-        if (pPantalla[i].isEmpty==1)
+        if(pPantalla[i].isEmpty==1)
         {
-            printf(" %d",pPantalla[i].id);
-            printf(" %d",pPantalla[i].tipo);
-            printf(" %f",pPantalla[i].precio);
-            printf(" %s",pPantalla[i].nombre);
-            printf(" %s\n",pPantalla[i].direccion);
+            printf("Direccion: %s\n",pPantalla[i].direccion);
+            printf("ID: %d\n",pPantalla[i].id);
+            printf("Nombre: %s\n",pPantalla[i].nombre);
+            printf("Precio: %2.f\n",pPantalla[i].precio);
+            printf("Tipo: %d \n",pPantalla[i].tipo);
         }
     }
-
 }
-
-
-void listarPorId(Pantalla* pPantalla, int limite)
-{
-
-    int i;
-    for (i=0;i<limite;i++)
-    {
-        if (pPantalla[i].isEmpty==1)
-        {
-            printf(" %d",pPantalla[i].id);
-
-        }
-    }
-
-}
-
-

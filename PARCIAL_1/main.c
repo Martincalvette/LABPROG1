@@ -3,13 +3,13 @@
 #include "parcial.h"
 #include "utn.h"
 #include "contrataciones.h"
-#define LIMITEP 100
-#define LIMITEC 1000
+
+
 
 int main()
 {
+    printf("Hola\n");
 
-    printf("Hola0");
     Pantalla pantallas[LIMITEP];
     Contrataciones contrataciones[LIMITEC];
 
@@ -17,7 +17,10 @@ int main()
     con_init_isEmpty(contrataciones,LIMITEC);
 
     altaPantalla(pantallas);
-    altaContrataciones (contrataciones,pantallas,LIMITEP,LIMITEC);
+    alta_contrataciones(contrataciones,pantallas,LIMITEP,LIMITEC);
+
+    listarPantalla(pantallas,LIMITEP);
+
 
     return 0;
 }
