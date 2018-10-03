@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1538240071 source:c:\users\gula\desktop\prog\tp_2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1538096746 c:\users\gula\desktop\prog\tp_2\utn.h
+
+1538527117 source:c:\users\gula\desktop\prog\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+	"utn.h"
+
+1538528348 c:\users\gula\desktop\prog\tp_2\empleados.h
+	<string.h>
+
+1538528312 source:c:\users\gula\desktop\prog\tp_2\empleados.c
+	"utn.h"
+	"empleados.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1538254097 source:c:\users\gula\desktop\prog\tp_2\parcial.c
+	<stdio.h>
+	<stdlib.h>
+	"parcial.h"
+	"utn.h"
+	<string.h>
+
+1538096746 c:\users\gula\desktop\prog\tp_2\parcial.h
+	<string.h>
+
