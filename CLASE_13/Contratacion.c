@@ -20,6 +20,7 @@ static int buscarLugarLibre(Contratacion* array,int limite);
  * \param array Pantalla*
  * \param limite int
  * \return int
+ *
  */
 int cont_init(Contratacion* array,int limite)
 {

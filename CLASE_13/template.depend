@@ -7,16 +7,12 @@
 	"fantasma.h"
 	"utn.h"
 
-1525298482 h"
-
 1524691839 source:d:\template\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"utn.h"
-
-1524691840 
 
 1524691839 d:\template\utn.h
 
@@ -84,8 +80,6 @@
 	"utn.h"
 	"Contratacion.h"
 
-1524791042 ion.h"
-
 1524791107 source:d:\labo1\clase11\pantalla.c
 	<stdio.h>
 	<stdlib.h>
@@ -152,56 +146,4 @@
 	"utn.h"
 
 1525305074 d:\clase12\informar.h
-
-1538602303 source:/home/alumno/Escritorio/MGCALVETTE/CLASE_13/Contratacion.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"Contratacion.h"
-	"utn.h"
-	"pantalla.h"
-
-1525304648 /home/alumno/Escritorio/MGCALVETTE/CLASE_13/Contratacion.h
-	"pantalla.h"
-
-1525298484 /home/alumno/Escritorio/MGCALVETTE/CLASE_13/pantalla.h
-
-1524691840 /home/alumno/Escritorio/MGCALVETTE/CLASE_13/utn.h
-
-1538507346 source:/home/alumno/Escritorio/MGCALVETTE/CLASE_13/informar.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"Contratacion.h"
-	"utn.h"
-	"pantalla.h"
-
-1538420303 source:/home/alumno/Escritorio/MGCALVETTE/CLASE_13/main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"pantalla.h"
-	"utn.h"
-	"Contratacion.h"
-	"informar.h"
-
-1525305076 /home/alumno/Escritorio/MGCALVETTE/CLASE_13/informar.h
-
-1525298484 source:/home/alumno/Escritorio/MGCALVETTE/CLASE_13/pantalla.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"pantalla.h"
-	"utn.h"
-
-1524691840 source:/home/alumno/Escritorio/MGCALVETTE/CLASE_13/utn.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"utn.h"
 
