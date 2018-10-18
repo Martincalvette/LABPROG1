@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1539820920 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/CLASE17/empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+
+1539820951 /home/alumno/Escritorio/MGCALVETTE/CLASE17/CLASE17/empleado.h
+
+1539820931 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/CLASE17/main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+
+1539822415 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+
+1539820951 /home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/empleado.h
+
+1539824234 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"service.h"
+
+1539822983 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/service.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"service.h"
+
+1539822379 /home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/service.h
+
+1539824139 source:/home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/user.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"user.h"
+
+1539824031 /home/alumno/Escritorio/MGCALVETTE/CLASE17/PrimerStruct/user.h
+
