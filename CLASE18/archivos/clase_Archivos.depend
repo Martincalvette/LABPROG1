@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1540342232 source:/home/profesor/Descargas/clase_Archivos/main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
+1540342036 source:/home/profesor/Descargas/clase_Archivos/cliente.c
+	"cliente.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1540342036 /home/profesor/Descargas/clase_Archivos/cliente.h
+
+1540343297 source:/home/alumno/Escritorio/archivos/main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
+1540343297 /home/alumno/Escritorio/archivos/cliente.h
+
+1540423738 source:/home/alumno/Escritorio/archivos/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1540423738 /home/alumno/Escritorio/archivos/utn.h
+
+1540425678 source:/home/alumno/Escritorio/MGCALVETTE/CLASE18/CLASE18/archivos/cliente.c
+	"cliente.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1540426679 /home/alumno/Escritorio/MGCALVETTE/CLASE18/CLASE18/archivos/cliente.h
+
+1540425678 /home/alumno/Escritorio/MGCALVETTE/CLASE18/CLASE18/archivos/utn.h
+
+1540426911 source:/home/alumno/Escritorio/MGCALVETTE/CLASE18/CLASE18/archivos/main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
+1540426006 source:/home/alumno/Escritorio/MGCALVETTE/CLASE18/CLASE18/archivos/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
