@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
-#include "utn.h"
-
-
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -15,26 +12,31 @@
  */
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
-
+    int retorno=-1;
     char bufferId[1024];
     char bufferNombre[1024];
-    char bufferHorasTrabajadas[1024];
+    char bufferHoras[1024];
     char bufferSueldo[1024];
-    Employee* auxEmployee;
-    do
-    {
-
-        if(fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo)==4)
-        {
-
-        //ll_newLinkedList();
-        auxEmployee = Employee_newConParametros(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
-
-
-
-        }
-    }while(!feof(pFile));
-    return 1;
+    int flagOnce=0;
+    Employee* employees;
+    if(pFile != NULL && pArrayListEmployee != NULL){
+        retorno=0;
+        do{
+            if(!flagOnce){
+                fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",bufferId,bufferNombre,bufferHoras,bufferSueldo);
+                flagOnce=1;
+            }
+            fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n", bufferId,bufferNombre,bufferHoras,bufferSueldo);
+            employees=Employee_newConParametros(bufferId,bufferNombre,bufferHoras,bufferSueldo);
+            if(employees!=NULL){
+                ll_add(pArrayListEmployee,employees);
+            }else{
+                printf("%s,%s,%s,%s\n", bufferId,bufferNombre,bufferHoras,bufferSueldo);
+                getchar();
+            }
+        }while(!feof(pFile));
+    }
+    return retorno;
 }
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
