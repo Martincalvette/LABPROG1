@@ -6,6 +6,8 @@
 	<time.h>
 	"utn.h"
 
+1538528312 
+
 1538096746 c:\users\gula\desktop\prog\tp_2\utn.h
 
 1538527117 source:c:\users\gula\desktop\prog\tp_2\main.c
@@ -14,8 +16,12 @@
 	"empleados.h"
 	"utn.h"
 
+1538527117 .h"
+
 1538528348 c:\users\gula\desktop\prog\tp_2\empleados.h
 	<string.h>
+
+1538096746 
 
 1538528312 source:c:\users\gula\desktop\prog\tp_2\empleados.c
 	"utn.h"
@@ -34,4 +40,30 @@
 
 1538096746 c:\users\gula\desktop\prog\tp_2\parcial.h
 	<string.h>
+
+1542232114 source:/home/alumno/Escritorio/MGCALVETTE/LABPROG1/TP_2/empleados.c
+	"utn.h"
+	"empleados.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1542232114 /home/alumno/Escritorio/MGCALVETTE/LABPROG1/TP_2/utn.h
+
+1542232114 /home/alumno/Escritorio/MGCALVETTE/LABPROG1/TP_2/empleados.h
+	<string.h>
+
+1542232114 source:/home/alumno/Escritorio/MGCALVETTE/LABPROG1/TP_2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+	"utn.h"
+
+1542232114 source:/home/alumno/Escritorio/MGCALVETTE/LABPROG1/TP_2/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
 
